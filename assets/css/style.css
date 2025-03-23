@@ -3,11 +3,96 @@
 *{
     box-sizing: border-box;
 }
+:root{
+    --header-bg:#10375C;
+}
 html{
     font-size: 62.5%;
 
 }
-.body{
+
+body{
     font-size: 1.6rem;
     font-family: "Sora", sans-serif; /* font chủ yếu của dự án này */
+}
+/* =========================== common ================================== */
+.container{
+    width: 1170px;
+    max-width: calc(100% - 48px); /* dùng calc() để khi thu nhỏ trang các phần tử 2 bên luôn cách lề 24px */
+margin: 0 auto; /* căn giữa khối container */
+}
+a{
+    text-decoration: none; /* bỏ gạch chân */
+}
+.btn{
+    display: inline-block; /* btn đang thẻ inline ,ta sử dụng display: inline-block để can thiệp kích thước */
+   min-width: 205px;
+line-height: 60px;
+
+border-radius: 30px;
+background: #2E80CE;
+color: #FFF;
+text-align: center;
+
+font-size: 1.8rem;
+font-style: normal;
+font-weight: 400;
+
+}
+.btn:hover{
+opacity: 0.8;
+}
+/* ========================= header ===================================== */
+.header{
+    padding-top: 30px;
+    background: var(--header-bg);
+   
+    min-height: 100vh; /* chiều cao tối thiểu = 100% viewport height*/
+}
+.header-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar__list{
+    display: flex;
+
+}
+.header__action--login,
+.navbar__link{
+    padding: 8px 21px; /* tạo khoảng cách giữa các phần tử */
+    color: #FFF;
+text-align: center;
+
+font-size: 1.6rem;
+font-style: normal;
+font-weight: 400;
+line-height: 1.75; /* 175% */
+}
+.navbar__link:hover,
+.navbar__link--active{
+    text-shadow: 1px 0 0 currentColor;
+    color: #fff;
+}
+.navbar__link--active::before{  /* ::before là 1 pseudo-element:dùng để chèn nội dung ảo và trước nội dung 1 phần tử mà không cần chỉnh sửa HTML */
+    content: ""; /* bắt buộc phải có nếu không nó sẽ không hiển thị gì */
+    display: inline-block;  /* Hiển thị trên cùng một dòng như inline.
+
+                             Chỉnh được kích thước (width, height) như block. */
+    width: 6px;
+    height: 6px;
+border-radius:50% ;
+background: #fff;
+top: -3px;
+position: relative; /* dùng relative cho phần tử chính nếu muốn phần tử ảo căn cứ vào nó sau đó điều chỉnh top,left,right,bottom theo ý muốn*/
+
+right: 8px;
+}
+.header__action--signup{
+    min-width: 144px;
+    line-height: 44px;
+    font-size: 1.6rem;
+}
+.header__action--login{
+    margin-right: 7px;
 }
