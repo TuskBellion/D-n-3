@@ -16,6 +16,10 @@ body{
     font-family: "Sora", sans-serif; /* font chủ yếu của dự án này */
 }
 /* =========================== common ================================== */
+input,textarea,select,button{
+    font-family: inherit;
+    font-size: inherit;
+}
 .container{
     width: 1170px;
     max-width: calc(100% - 48px); /* dùng calc() để khi thu nhỏ trang các phần tử 2 bên luôn cách lề 24px */
@@ -600,6 +604,7 @@ font-weight: 400;
 
 /* ============================== bg ============================== */
 .bg{
+    margin-top: 85px;
     padding: 85px 0;
     background: #F6FBFF;
   height: 452px;
@@ -628,7 +633,8 @@ height: 2px;
 background: #2E80CE;
 }
 .bg__desc{
-    width: 617px;
+   max-width:  617px;
+   margin: 18px auto 0;
     color: #575F66;
 text-align: center;
 
@@ -642,3 +648,136 @@ line-height: 1.75; /* 175% */
     
 }
 
+/* ============================= footer */
+.footer{
+    height: 553px;
+    margin-top: 170px;
+    padding-top: 100px;
+    background: #10375C;
+    font-family: "Open Sans", sans-serif;
+}
+.footer__top{
+    display: grid;
+    grid-template-columns: 1fr 0.4fr 0.4fr 1fr;
+    column-gap: 78px;
+
+}
+.footer__desc{
+    margin-top: 21px;
+    max-width: 336px;
+    color: #A9B3BB;
+
+font-size: 1.6rem;
+
+font-weight: 400;
+line-height: 1.75; /* 175% */
+}
+.footer__heading{
+    color: #FFF;
+
+font-size: 1.6rem;
+
+font-weight: 600;
+line-height: 1.75; /* 175% */
+}
+.footer__list{
+    
+margin: 20px 0 28px;
+
+}
+.footer__link{
+    color: #A9B3BB;
+
+font-size: 1.4rem;
+
+font-weight: 400;
+line-height: 1.85; /* 185.714% */
+white-space: nowrap;  /* chữ không bị bẻ xuống dòng */
+}
+.footer__link:hover{
+    text-decoration: underline;
+}
+.footer__item{
+    margin-bottom: 10px;
+}
+.footer__social{
+    display: flex;
+   column-gap: 10px;
+    margin: 20px 0 28px;
+}
+.footer__social-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 32px;
+height: 32px;
+
+    border-radius: 50%;
+background: #fff;
+color: #2E80CE;
+}
+.footer__social-btn:hover {
+    background:#2E80CE;
+    
+color: #fff;
+}
+.footer-form{
+    display: flex;
+    column-gap: 12px;
+    margin-top: 10px;
+
+}
+.footer-form__input{
+    width: 212px;
+height: 46px;
+border-radius: 4px;
+border: 1px solid #406181;
+background: transparent;
+outline: none;
+color: #fff;
+}
+.footer-form__input::placeholder{
+    color: #9CA8B1;
+
+font-size: 1.4rem;
+
+font-weight: 400;
+line-height: 1.86; /* 185.714% */
+}
+.footer-form__submit{
+    width: 108px;
+    height: 46px;
+    border-radius: 4px;
+background: #2E80CE;
+
+
+
+font-weight: 600;
+
+color: #FFF;
+
+font-size: 1.4rem;
+
+
+line-height: 1.86; /* 185.714% */
+border: none;
+}
+.footer-form__submit:hover{
+    cursor: pointer;
+    opacity: 0.9;
+
+}
+.footer__copyright{
+    border-top:1px solid #406181 ;
+}
+.footer__copyright-text{
+    padding: 28px 0 42px;
+    color: #AAB3BA;
+text-align: center;
+
+font-size: 1.4rem;
+
+font-weight: 400;
+line-height: 1.86; /* 185.714% */
+}
