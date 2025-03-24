@@ -597,3 +597,48 @@ font-weight: 400;
     color: #2E80CE;
 
 }
+
+/* ============================== bg ============================== */
+.bg{
+    padding: 85px 0;
+    background: #F6FBFF;
+  height: 452px;
+}
+.bg__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.bg__heading{
+ 
+    color: #10375C;
+text-align: center;
+
+font-size: 5rem;
+
+font-weight: 600;
+line-height: 1.2; /* 120% */
+letter-spacing: -1px;
+}
+.bg__triangle{
+    margin-top: 18px;
+    width: 136px;
+height: 2px;
+background: #2E80CE;
+}
+.bg__desc{
+    width: 617px;
+    color: #575F66;
+text-align: center;
+
+font-size: 1.6rem;
+
+font-weight: 300;
+line-height: 1.75; /* 175% */
+}
+.bg__cta{
+    margin-top: 38px;
+    
+}
+
